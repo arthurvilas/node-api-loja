@@ -19,6 +19,9 @@ app.use('/api/v1/products', productsRouter);
 // Não encontrado
 app.use(notFound);
 
+// Erro
+app.use(errorHandler);
+
 const port = process.env.PORT || 5000;
 const start = async () => {
     try {
